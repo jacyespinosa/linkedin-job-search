@@ -9,7 +9,7 @@ PASSWORD = "ENTER PASSWORD"
 chrome_driver_path = "ENTER CHROME DRIVER PATH"
 driver = webdriver.Chrome(executable_path=chrome_driver_path)
 
-#UPDATE THE LINK TO YOUR OWN PREFERENCE
+#UPDATE THE LINK TO YOUR OWN PREFERENCE -- EASY APPLY OPTION
 driver.get("https://www.linkedin.com/jobs/search/?f_LF=f_AL&geoId=106233382&keywords=software%20engineer&location=San%20Jose%2C%20California%2C%20United%20States")
 
 #SIGN IN
@@ -32,7 +32,7 @@ for job in job_list:
     job.click()
     time.sleep(2)
 
-    save_button = driver.find_element_by_css_selector(".jobs-save-button")
-    save_button.click()
+    apply_button = driver.find_element_by_css_selector(".jobs-apply-button--top-card")
+    apply_button.click()
 
     time.sleep(5)
